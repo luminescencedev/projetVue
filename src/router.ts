@@ -1,30 +1,18 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Home from './pages/HomePage.vue';
-import About from './pages/AboutPage.vue';
-import Contact from './pages/ContactPage.vue';
-import Work from './pages/WorkPage.vue';
+import HomePage from './pages/HomePage.vue';
+import RegisterPage from './pages/RegisterPage.vue';
+import LoginPage from './pages/LoginPage.vue';
+import ChefsPage from './pages/ChefsPage.vue';
+import ChefDetailPage from './pages/ChefDetailPage.vue';
+import CartPage from "./pages/CartPage.vue";
 
 const routes = [
-    {
-        path: '/',
-        name: 'Home',
-        component: Home
-    },
-    {
-        path: '/about',
-        name: 'About',
-        component: About
-    },
-    {
-        path: '/contact',
-        name: 'Contact',
-        component: Contact
-    },
-    {
-        path: '/works',
-        name: 'Works',
-        component: Work
-    }
+  { path: '/', component: HomePage },
+  { path: '/cart', component: CartPage },
+  { path: '/register', component: RegisterPage },
+  { path: '/login', component: LoginPage },
+  { path: '/chefs', component: ChefsPage },
+  { path: '/chefs/:id', component: ChefDetailPage }
 ];
 
 const router = createRouter({
