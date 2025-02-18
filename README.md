@@ -6,7 +6,7 @@ HomeMade est une plateforme où vous pouvez découvrir et réserver des chefs cu
 ## Installation
 1. Clonez le dépôt :
     ```bash
-    git clone 
+    git clone https://github.com/luminescencedev/projetVue.git
     cd projetVue
     ```
 
