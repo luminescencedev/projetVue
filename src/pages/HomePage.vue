@@ -4,7 +4,7 @@
     <div class="h-full flex justify-center items-center pt-20 px-4 pb-4">
       <div class="home-card h-full w-full flex flex-col gap-10 p-16">
         <h1 class="text-6xl">Bienvenue sur HomeMade</h1>
-        <router-link to="/chefs" class="text-2xl">Voir les Cuisiniers</router-link>
+        <router-link to="/chefs" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-2xl w-[20vw] text-center">Voir les Cuisiniers <span class="font-[]">--></span></router-link>
       </div>
     </div>
     

@@ -1,5 +1,5 @@
 <template>
-    <header class="w-screen fixed flex flex-row justify-between p-6">
+    <header class="w-screen fixed flex flex-row justify-between p-6 z-100">
         <router-link to="/"><h1>Home Made</h1></router-link>
         <nav class="flex flex-row gap-10">
             <router-link to="/chefs">Cuisiniers</router-link>
