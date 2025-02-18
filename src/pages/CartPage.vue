@@ -11,9 +11,9 @@
           <div v-for="item in cartItems" :key="item.id">
             <CartItem :item="item" />
           </div>
-          <div class="total mt-4">
-            <h2>Total : {{ total }} €</h2>
-          </div>
+            <div class="total mt-4 p-4 bg-gray-100 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold">Total : {{ total }} €</h2>
+            </div>
         </div>
       </div>
     </div>

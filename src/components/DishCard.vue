@@ -1,32 +1,35 @@
 <template>
-  <div class="dish-card flex flex-col gap-4 w-full">
-    <h3>{{ dish.name }}</h3>
-    <p>{{ dish.description }}</p>
-    <p>{{ dish.price }} €</p>
-    <button @click="addToCart" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ajouter au Panier</button>
+  <div class="dish-card p-4 border rounded shadow-md">
+    <h3 class="text-xl">{{ dish.name }}</h3>
+    <p class="text-base">{{ dish.description }}</p>
+    <p class="text-lg font-bold">{{ dish.price }} €</p>
+    <button @click="addToCart" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">
+      Ajouter au panier
+    </button>
+    <Notification v-if="showNotification" :message="notificationMessage" />
   </div>
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue';
 import { defineProps } from 'vue';
 import { useCartStore } from '../store/cart';
+import Notification from './Notifications.vue';
 
 const props = defineProps<{ dish: { id: number, name: string, description: string, price: number } }>();
 const store = useCartStore();
+const showNotification = ref(false);
+const notificationMessage = ref('');
 
 const addToCart = () => {
   store.addToCart(props.dish);
+  notificationMessage.value = `${props.dish.name} a été ajouté au panier !`;
+  showNotification.value = true;
+  setTimeout(() => {
+    showNotification.value = false;
+  }, 3000);
 };
 </script>
-
 <style scoped>
-.dish-card {
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
+
 </style>
