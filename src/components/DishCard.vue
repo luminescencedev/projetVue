@@ -1,5 +1,5 @@
 <template>
-  <div class="dish-card flex flex-col gap-4 w-[20vw]">
+  <div class="dish-card flex flex-col gap-4 w-full">
     <h3>{{ dish.name }}</h3>
     <p>{{ dish.description }}</p>
     <p>{{ dish.price }} €</p>

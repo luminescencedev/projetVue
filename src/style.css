@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: '';
-    src: url();
+    font-family: 'FiraCode';
+    src: url('./assets/fonts/FIRACODE-REGULAR.TTF');
 }

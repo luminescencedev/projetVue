@@ -3,7 +3,7 @@
     <Header  class="text-white" />
     <div class="h-full flex justify-center items-center pt-20 px-4 pb-4">
       <div class="cart-hero h-full w-full flex flex-col gap-10 p-16 overflow-y-scroll">
-        <h1>Mon Panier :</h1>
+        <h1 class="text-6xl">Mon Panier :</h1>
         <div v-if="cartItems.length === 0">
           <p>Votre panier est vide.</p>
         </div>

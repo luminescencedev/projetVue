@@ -2,14 +2,16 @@
   <div class="chefs-page h-screen w-screen">
     <Header class="text-white"/>
     <div class="h-full flex justify-center items-center pt-20 px-4 pb-4">
-      <div class="chefs-hero h-full w-full flex flex-col gap-10 p-16">
-        <h1>Nos Cuisiniers :</h1>
-        <div v-for="chef in chefs" :key="chef.id">
-          <ChefCard :chef="chef" />
+      <div class="chefs-hero h-full w-full flex flex-col gap-10 p-16 overflow-y-scroll">
+        <h1 class="text-2xl sm:text-4xl md:text-6xl">Nos Cuisiniers :</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div v-for="chef in chefs" :key="chef.id">
+            <ChefCard :chef="chef" />
+          </div>
         </div>
+        
       </div>
     </div>
-    
   </div>
 </template>
 

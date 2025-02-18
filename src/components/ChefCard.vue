@@ -1,5 +1,5 @@
 <template>
-  <div class="chef-card flex flex-col gap-4 w-[20vw]">
+  <div class="chef-card flex flex-col gap-4 w-full">
     <h3>{{ chef.name }}</h3>
     <p>{{ chef.description }}</p>
     <button @click="viewDetails" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
