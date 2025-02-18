@@ -7,12 +7,12 @@ import ChefDetailPage from './pages/ChefDetailPage.vue';
 import CartPage from "./pages/CartPage.vue";
 
 const routes = [
-  { path: '/', component: HomePage },
-  { path: '/cart', component: CartPage },
-  { path: '/register', component: RegisterPage },
-  { path: '/login', component: LoginPage },
-  { path: '/chefs', component: ChefsPage },
-  { path: '/chefs/:id', component: ChefDetailPage }
+  { path: '/', name: 'Home', component: HomePage },
+  { path: '/cart', name: 'Cart', component: CartPage },
+  { path: '/register', name: 'Register', component: RegisterPage },
+  { path: '/login', name: 'Login', component: LoginPage },
+  { path: '/chefs', name: 'Chefs', component: ChefsPage },
+  { path: '/chefs/:id', name: 'ChefDetail', component: ChefDetailPage }
 ];
 
 const router = createRouter({

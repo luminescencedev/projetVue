@@ -22,6 +22,8 @@
 </template>
 
 <script lang="ts" setup>
+
+
 import { computed } from 'vue';
 import Header from '../components/Header.vue';
 import CartItem from '../components/CartItem.vue';
